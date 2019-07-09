@@ -54,7 +54,7 @@
 <img width="657" alt="스크린샷 2019-07-09 오후 10 42 19" src="https://user-images.githubusercontent.com/39197978/60892888-db55b000-a29a-11e9-8541-eb543a0a1b79.png">
 
 `value`에는 `array, object`로 표현될 수 있는 데 , 
-또  `array, object`는 `value`를 포함하는 **사이클**구조였다.
+또  `array, object`는 `value`를 포함하는 **사이클구조**였다.
 
  밖에서 부터 분석을 하며, 새로운 분석객체(`JSONList[],JSONObject{}`)를 만났을 때 재귀적으로 다시 분석을 시작 함으로써, 스택과 유사한 방식으로 분석을 할 수 있다는 것을 느꼈다.
 
@@ -70,6 +70,7 @@
 마지막에 `swift`자료구조의형태로 파싱된 `JSON`데이터들을 출력하는 과제가 남아있었다.
 
 **객체(JSONList,JSONObject) 각각이 자신의 포맷을 결정**하게 끔하여 **다형메소드**로 구현하는 방법이 있었고, 
+
 
 입력된 객체에 따른 형식화를 해주는 별도의 객체(Formatter)를 두는 방법이 있었다.
 
