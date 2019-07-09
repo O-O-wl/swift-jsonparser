@@ -51,7 +51,7 @@
 `Parser`를 진행할 때 다시 다른 방식도 고민해보았다.
 
 
-<img width="657" alt="스크린샷 2019-07-09 오후 10 42 19" src="https://user-images.githubusercontent.com/39197978/60892888-db55b000-a29a-11e9-8541-eb543a0a1b79.png">
+<img width="657" alt="스크린샷 2019-07-09 오후 10 42 19" src="https://user-images.githubusercontent.com/39197978/60892888-db55b000-a29a-11e9-8541-eb543a0a1b79.png">
 
 `value`에는 `array, object`로 표현될 수 있는 데 , 
 또  `array, object`는 `value`를 포함하는 **사이클**구조였다.
@@ -59,8 +59,8 @@
  밖에서 부터 분석을 하며, 새로운 분석객체(`JSONList[],JSONObject{}`)를 만났을 때 재귀적으로 다시 분석을 시작 함으로써, 스택과 유사한 방식으로 분석을 할 수 있다는 것을 느꼈다.
 
 또 ! `JSONList[],JSONObject{}` 각각의 문법 규칙이 달라서 분석의 차이가 있었다.
-<img width="668" alt="스크린샷 2019-07-09 오후 10 42 00" src="https://user-images.githubusercontent.com/39197978/60892886-dabd1980-a29a-11e9-9929-48aaa7ad01aa.png">
-<img width="653" alt="스크린샷 2019-07-09 오후 10 42 06" src="https://user-images.githubusercontent.com/39197978/60892887-dabd1980-a29a-11e9-92fa-3d8cd41ccb78.png">
+<img width="668" alt="스크린샷 2019-07-09 오후 10 42 00" src="https://user-images.githubusercontent.com/39197978/60892886-dabd1980-a29a-11e9-9929-48aaa7ad01aa.png">
+<img width="653" alt="스크린샷 2019-07-09 오후 10 42 06" src="https://user-images.githubusercontent.com/39197978/60892887-dabd1980-a29a-11e9-92fa-3d8cd41ccb78.png">
 
 두개의 분석방식을 적절히 스위칭하며 분석을 하고자 하였어서 `스트래티지패턴`이라는 것도 적용 해봤다.
 **스트래티지**를  선택하는 근거(?)는 토큰이 `"[,{"` 같은 분석의 시작점을 통해 결정되게 하였다.
@@ -74,7 +74,7 @@
 입력된 객체에 따른 형식화를 해주는 별도의 객체(Formatter)를 두는 방법이 있었다.
 
 클린코드의 책을 빌리자면 두개는 상황에 따라 다르다고 한다.
-**타입이 계속적인 추가가 있을 형태라면?** 그때마다 형식화를 하는 객체의 `switch문`은 고장날 것이고, 커질 것이라는 것이다. 이럴 떄는 **다형메소드가 더 좋은 방법**일 것이다.
+**타입이 계속적인 추가가 있을 형태라면?** 그마다 형식화를 하는 객체의 `switch문`은 고장날 것이고, 커질 것이라는 것이다. 이럴 떄는 **다형메소드가 더 좋은 방법**일 것이다.
 
 
 ### 하지만
